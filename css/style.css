@@ -950,3 +950,16 @@ h4 { font-size: clamp(1rem, 1.2vw + 0.75rem, 1.25rem); line-height: 1.3; }
 
 /* Hide the other variants (optional) */
 .med-work, .small-work { display: none !important; }
+/* Fix overlapping section titles on mobile */
+.section-title {
+    margin-top: 60px;  /* add extra spacing above */
+    padding-top: 10px;
+    display: block;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        margin-top: 80px; /* more spacing on phones */
+    }
+}
