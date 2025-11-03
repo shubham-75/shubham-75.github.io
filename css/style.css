@@ -963,12 +963,3 @@ h4 { font-size: clamp(1rem, 1.2vw + 0.75rem, 1.25rem); line-height: 1.3; }
         margin-top: 80px; /* more spacing on phones */
     }
 }
-.about-img {
-    width: 100%;
-    max-width: 450px;   /* stops it from stretching huge on desktop */
-    height: auto;       /* keeps original proportions */
-    object-fit: cover;  /* prevents distortion */
-    border-radius: 12px;
-    display: block;
-    margin: 0 auto;
-}
