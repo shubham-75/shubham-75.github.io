@@ -853,3 +853,10 @@ i.title-icon {
 #work {
     margin-top: 0; /* remove default top spacing */
 }
+
+/* Show the large-work layout on all screen sizes */
+.large-work { display: block !important; }
+
+/* Hide the other variants (optional) */
+.med-work, .small-work { display: none !important; }
+
