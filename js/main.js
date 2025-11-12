@@ -21,3 +21,11 @@ function scrollFunction() {
 		document.querySelector('.scroll-top').classList.remove('show');
 	}
 }
+const audio = document.getElementById("hello-audio");
+const playBtn = document.getElementById("play-hello");
+
+playBtn.addEventListener("click", (event) => {
+  event.stopPropagation(); // prevent triggering any parent clicks
+  audio.currentTime = 0;
+  audio.play();
+});
