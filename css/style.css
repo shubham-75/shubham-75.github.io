@@ -1060,16 +1060,20 @@ h4 { font-size: clamp(1rem, 1.2vw + 0.75rem, 1.25rem); line-height: 1.3; }
   }
   
 
-  .video-wrapper {
-    width: 350px;       /* vertical videos look good at this width */
-    margin: 40px auto;
+  .video-section {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
   }
   
-  .video-wrapper iframe {
-    width: 100%;
-    height: 500px;      /* tall height for vertical video */
+  /* 16:9, thumbnail-ish, and definitely not vertical */
+  .yt-embed {
+    width: 480px;   /* thumbnail-ish width */
+    height: 270px;  /* 16:9 height = 480 * 9 / 16 */
     border-radius: 14px;
     border: none;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   }
+  
   
   
