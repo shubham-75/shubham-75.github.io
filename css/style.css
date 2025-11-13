@@ -1061,25 +1061,15 @@ h4 { font-size: clamp(1rem, 1.2vw + 0.75rem, 1.25rem); line-height: 1.3; }
   
 
   .video-wrapper {
-    position: relative;
-    width: 480px;           /* Thumbnail-sized width */
-    max-width: 90%;         /* Responsive on mobile */
-    margin: 40px auto;      /* Centers it */
-    padding-bottom: 56.25%; /* 16:9 aspect ratio (thumbnail shape) */
-    height: 0;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+    width: 350px;       /* vertical videos look good at this width */
+    margin: 40px auto;
   }
   
   .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    border: 0;
+    height: 500px;      /* tall height for vertical video */
     border-radius: 14px;
+    border: none;
   }
   
   
