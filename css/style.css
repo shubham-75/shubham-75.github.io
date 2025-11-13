@@ -1062,14 +1062,14 @@ h4 { font-size: clamp(1rem, 1.2vw + 0.75rem, 1.25rem); line-height: 1.3; }
 
   .video-wrapper {
     position: relative;
-    width: 70%;            /* controls the size — adjust to 60%, 50% if you want smaller */
-    max-width: 600px;      /* max size on big screens */
-    margin: 30px auto;     /* centers the video */
-    padding-bottom: 56.25%; /* dynamic height (16:9) */
+    width: 90%;            /* increase size */
+    max-width: 900px;      /* TRIPLE size visually */
+    margin: 40px auto;     /* center horizontally */
+    padding-bottom: 56.25%; /* 16:9 ratio */
     height: 0;
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1); /* subtle premium shadow */
+    box-shadow: 0px 8px 30px rgba(0,0,0,0.15);
   }
   
   .video-wrapper iframe {
@@ -1079,6 +1079,6 @@ h4 { font-size: clamp(1rem, 1.2vw + 0.75rem, 1.25rem); line-height: 1.3; }
     width: 100%;
     height: 100%;
     border: 0;
-    border-radius: 12px;
+    border-radius: 16px;
   }
   
