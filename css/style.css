@@ -950,7 +950,6 @@ h4 { font-size: clamp(1rem, 1.2vw + 0.75rem, 1.25rem); line-height: 1.3; }
 
 /* Hide the other variants (optional) */
 .med-work, .small-work { display: none !important; }
-<<<<<<< HEAD
 /* Fix overlapping section titles on mobile */
 .section-title {
     margin-top: 60px;  /* add extra spacing above */
@@ -1063,14 +1062,14 @@ h4 { font-size: clamp(1rem, 1.2vw + 0.75rem, 1.25rem); line-height: 1.3; }
 
   .video-wrapper {
     position: relative;
-    width: 90%;            /* increase size */
-    max-width: 900px;      /* TRIPLE size visually */
-    margin: 40px auto;     /* center horizontally */
-    padding-bottom: 56.25%; /* 16:9 ratio */
+    width: 480px;           /* Thumbnail-sized width */
+    max-width: 90%;         /* Responsive on mobile */
+    margin: 40px auto;      /* Centers it */
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (thumbnail shape) */
     height: 0;
-    border-radius: 16px;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0px 8px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
   }
   
   .video-wrapper iframe {
@@ -1080,8 +1079,7 @@ h4 { font-size: clamp(1rem, 1.2vw + 0.75rem, 1.25rem); line-height: 1.3; }
     width: 100%;
     height: 100%;
     border: 0;
-    border-radius: 16px;
+    border-radius: 14px;
   }
   
-=======
->>>>>>> 74df5fa497858e094d8551817ef88212ef4f777e
+  
