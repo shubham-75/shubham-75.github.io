@@ -1075,5 +1075,22 @@ h4 { font-size: clamp(1rem, 1.2vw + 0.75rem, 1.25rem); line-height: 1.3; }
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   }
   
+
+  .video-force {
+    width: 100%;
+    max-width: 560px;  /* you can change this */
+    margin: 30px auto;
+  }
+  
+  .video-force iframe {
+    width: 100% !important;
+    aspect-ratio: 16 / 9 !important;
+    height: auto !important;
+    display: block;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  }
+  
   
   
