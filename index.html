@@ -28,27 +28,7 @@
                 <a class="nav-item" href="#projects" onclick="navbarClose()">Projects</a>
             </div>
         </div> -->
-
-        <div class="content">
-            <div class="landing">
-                <h1 class="animate1">
-                    Hey! I'm <span style="color: var(--primary-light);">Shubham.</span>
-                    <div class="animate2">
-                        <span id="typed"></span>
-                    </div>
-                </h1>
-            </div>
-        </div>
         
-        <span id="name-audio" style="cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
-            Shubham 
-            <span id="play-hello" style="cursor: pointer; font-size: 18px;">🔊</span>
-          </span>
-          
-          <audio id="hello-audio">
-            <source src="assets/audio/hello.m4a" type="audio/mp4">
-          </audio>
-          
 
             <div class="section" id="intro">
                 <h3 class="section-title">Introduction <i class="material-icons title-icon">waving_hand</i></h3>
@@ -59,8 +39,16 @@
                         <img src="img/4BA765F3-768B-4014-B2F4-F7C7D07CFF9A_1_201_a.jpeg" class="about-img">
                     </div>
                     <div class="about-half">
-                        <p>My name is Shubham Agrawal and I am a graduate with a <span style="color: var(--secondary);">Master’s in Business Analytics</span> from <span style="color: var(--secondary);">the University of Warwick</span>. 
-                        <br>
+                        <p>
+                            My name is 
+                            <span id="name-audio" style="cursor: pointer; display: inline-flex; align-items: center; gap: 6px;">
+                                Shubham Agrawal
+                                <span id="play-hello" style="cursor: pointer; font-size: 18px;">🔊</span>
+                            </span>
+                            and I am a graduate with a <span style="color: var(--secondary);">Master’s in Business Analytics</span> 
+                            from <span style="color: var(--secondary);">the University of Warwick</span>.
+                          </p>
+                                                  <br>
                         <br>
                         <p>I’ve always been the kind of person who can’t help but ask <span style="color: var(--secondary);">“why?”</span> and imagine how things could have been different. <span style="color: var(--secondary);">Product management</span> as my career choice has thus arisen as the natural outlet for that curiosity. I love diving deep into challenges, using <span style="color: var(--secondary);">data and user insights</span> to shape solutions that make an impact. I tend to resort to a future-focused approach, thereby, building products that don’t just meet today’s needs, but stay ahead of the curve.</p>
                         <br>
@@ -193,15 +181,18 @@
                 </div>
             </div>
 
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-                <iframe 
-                    src="https://www.youtube.com/watch?v=RrFGQp4ckN4"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                </iframe>
-              </div>
+
+<div class="video-wrapper">
+  <iframe 
+    src="https://www.youtube.com/embed/q_56Jap-ZXg"
+    title="YouTube video"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowfullscreen>
+  </iframe>
+</div>
+
+              
               
 
             <div class="section" id="projects">
@@ -350,9 +341,34 @@
                 </div>
             </div>
            
-
+            <audio id="hello-audio">
+                <source src="src/assets/shubham audio.mp4" type="audio/mp4">
+              </audio>
+              
 
         </div>
+        
+        <div class="section" id="resume" style="text-align: center;">
+            <h3 class="section-title">
+                Resume <i class="material-icons title-icon">description</i>
+            </h3>
+        
+            <br>
+        
+            <!-- CLICKABLE PDF PREVIEW -->
+            <a href="src/assets/Shubham Agrawal Resume November 2025 (1).pdf" 
+               target="_blank"
+               class="resume-preview-link">
+        
+                <iframe 
+                    src="src/assets/Shubham Agrawal Resume November 2025 (1).pdf#toolbar=0"
+                    class="resume-viewer">
+                </iframe>
+        
+            </a>
+        
+        </div>
+        
 
 
         <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://kit.fontawesome.com/60d411b6dd.js" crossorigin="anonymous"></script>
