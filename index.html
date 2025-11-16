@@ -456,30 +456,11 @@
         
         </div>
         <script>
-
-            async function loadLondonWeather() {
-                const apiKey = "be117ba9401773dbc9c56ee2c95706b9";  // <-- Replace with your OpenWeatherMap API key
-                const url = `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=${apiKey}`;
-            
-                try {
-                    const response = await fetch(url);
-                    const data = await response.json();
-            
-                    const temp = Math.round(data.main.temp);
-                    const desc = data.weather[0].description
-                                    .replace(/\b\w/g, c => c.toUpperCase()); // Make description title-case
-            
-                    document.getElementById("london-weather").innerText =
-                        `London · ${temp}°C · ${desc}`;
-                } catch (error) {
-                    document.getElementById("london-weather").innerText =
-                        "London · Weather unavailable";
-                }
-            }
-            
-            loadLondonWeather();
-            </script>
-            
+            ...all the weather code...
+         </script>
+         
+         </body>
+         </html>
 
 
         <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://kit.fontawesome.com/60d411b6dd.js" crossorigin="anonymous"></script>
