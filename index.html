@@ -488,35 +488,42 @@
         <script src="js/main.js"></script>
 
         <script>
-            async function loadTicker() {
-                const apiKey = "be117ba9401773dbc9c56ee2c95706b9";  // put your OpenWeatherMap key here
-                let weatherPart = "London Weather Unavailable";
+            function setTicker(text) {
+                document.getElementById("ticker-text").innerText = text;
+            }
+            
+            // 1️⃣ Show INSTANT TEXT (no weather yet)
+            setTicker(
+                "🚀 Welcome to my portfolio │ Loading weather… │ Associate Product Manager @ Warner Bros. Discovery │ Product Vision │ Product Insights │ Product Analytics │ Product Strategy │ Open to roles"
+            );
+            
+            async function loadTickerWeather() {
+                const apiKey = "be117ba9401773dbc9c56ee2c95706b9";
+                let weatherText = "London · Weather unavailable";
             
                 try {
                     const url = `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=${apiKey}`;
-                    const res = await fetch(url);
+                    const res = await fetch(url, { timeout: 2000 }); // 2 sec timeout
                     const data = await res.json();
             
                     const temp = Math.round(data.main.temp);
-                    const desc = data.weather[0].description
-                                    .replace(/\b\w/g, c => c.toUpperCase());
+                    const desc = data.weather[0].description.replace(/\b\w/g, c => c.toUpperCase());
             
-                    weatherPart = `London ${temp}°C ${desc}`;
-                } catch (e) {
-                    // if anything fails, we keep the fallback text
+                    weatherText = `London · ${temp}°C · ${desc}`;
+                } catch (err) {
+                    // If API fails, we keep fallback text
                 }
             
-                const rest =
-                    "Associate Product Manager @ Warner Bros. Discovery │ Product Vision │ Product Insights │ Product Analytics │ Product Strategy │ Open to roles";
-            
-                document.getElementById("ticker-text").innerText =
-                    `🚀 Welcome to my portfolio │ ${weatherPart} │ ${rest}`;
+                // 2️⃣ Replace only the weather part dynamically
+                setTicker(
+                    `🚀 Welcome to my portfolio │ ${weatherText} │ Associate Product Manager @ Warner Bros. Discovery │ Product Vision │ Product Insights │ Product Analytics │ Product Strategy │ Open to roles`
+                );
             }
             
-            loadTicker();
+            // Load the weather in background
+            loadTickerWeather();
             </script>
-            </body>
-            </html>
+            
             
       </body>
 </html>
