@@ -492,16 +492,15 @@
     </body>
     <body>
         <div class="top-ticker">
-            <span>
-                🚀 Welcome to my portfolio · London · 12°C · Scattered Clouds · Associate Product Manager at Warner Bros. Discovery. Product Vision. Product Insights. Product Analytics. Product Strategy. Open to roles
-            </span>
+            <span id="ticker-text">Loading...</span>
         </div>
+        
         
         <div id="root"></div>
         <script type="module" src="/src/main.jsx"></script>
         <script>
             async function loadLondonWeather() {
-                const apiKey = "YOUR_API_KEY";  // <-- Replace with your OpenWeatherMap API key
+                const apiKey = "Ybe117ba9401773dbc9c56ee2c95706b9";  // <-- Replace with your OpenWeatherMap API key
                 const url = `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=${apiKey}`;
             
                 try {
