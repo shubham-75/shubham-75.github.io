@@ -1092,7 +1092,36 @@ h4 { font-size: clamp(1rem, 1.2vw + 0.75rem, 1.25rem); line-height: 1.3; }
     box-shadow: 0 8px 24px rgba(0,0,0,0.15);
   }
   
-  
+  .top-ticker {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background: #111;      /* tweak to match your theme */
+    color: #fff;
+    padding: 8px 0;
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.top-ticker span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: ticker 20s linear infinite;
+}
+
+@keyframes ticker {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-100%); }
+}
+
+/* so your content doesn't hide under the ticker */
+body {
+    padding-top: 40px;
+}
+
   .weather-ticker {
     width: 100%;
     background: #111;       /* dark clean bar */
