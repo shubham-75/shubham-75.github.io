@@ -13,48 +13,69 @@
     </head>
 
 <body>
+    <div class="top-info-bar">
+        <div class="top-info-inner">
+    
+            <span class="top-info-item">
+                <i class="material-icons top-info-icon">insights</i>
+                Product Strategy
+            </span>
+            <span class="top-info-divider">│</span>
+    
+            <span class="top-info-item">
+                <i class="material-icons top-info-icon">person</i>
+                User Insights
+            </span>
+    
+            <span class="top-info-divider">│</span>
+    
+            <span class="top-info-item">
+                <i class="material-icons top-info-icon">psychology</i>
+                Experimentation
+            </span>
 
-    <body>
-
-        <!-- FLOATING TOP INFO BAR -->
-        <div class="top-info-bar">
-            <div class="top-info-inner">
-                
-                <span class="top-info-item">
-                    <i class="material-icons top-info-icon">waving_hand</i>
-                    <span>Hey, I'm Shubham</span>
-                </span>
+            <span class="top-info-divider">│</span>
     
-                <span class="top-info-divider"></span>
+            <span class="top-info-item">
+                <i class="material-icons top-info-icon">work</i>
+                APM @ Warner Bros. Discovery
+            </span>
     
-                <span class="top-info-item">
-                    <i class="material-icons top-info-icon">place</i>
-                    <span>London, UK</span>
-                </span>
+            <span class="top-info-divider">│</span>
     
-                <span class="top-info-divider"></span>
+            <span class="top-info-item">
+                <i class="material-icons top-info-icon">place</i>
+                London, UK
+            </span>
     
-                <span class="top-info-item">
-                    <i class="material-icons top-info-icon">work</i>
-                    <span>Associate PM @ WBD</span>
-                </span>
+            <span class="top-info-divider">│</span>
     
-                <span class="top-info-divider"></span>
+            <span class="top-info-item">
+                <i class="material-icons top-info-icon">stars</i>
+                Open to Product Roles
+            </span>
     
-                <span class="top-info-item">
-                    <i class="material-icons top-info-icon">insights</i>
-                    <span>Product Vision · Insights · Strategy</span>
-                </span>
-    
-                <span class="top-info-divider"></span>
-    
-                <span class="top-info-item">
-                    <i class="material-icons top-info-icon">open_in_new</i>
-                    <span>Open to roles</span>
-                </span>
-            </div>
         </div>
+    </div>
+        </div>
+    </div>
     
+    
+
+    <div class="content">
+        <div class="landing">
+            <h1 class="animate1">
+                Hey! I'm <span style="color: var(--primary-light);">Shubham.</span>
+                <div class="animate2">
+                    <span id="before-typed">I </span>
+                    <span id="typed" style="color: var(--secondary)"></span>
+                    <br class="animate2 extra-small">
+                    <span id="cursor"></span>
+                </div>
+            </h1>
+        </div>
+    </div>
+
 
 
         <div class="navbar">
@@ -492,6 +513,43 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="js/typed.min.js"></script>
         <script src="js/main.js"></script>
+
+        <script>
+            function setTicker(text) {
+                document.getElementById("ticker-text").innerText = text;
+            }
+            
+            // 1️⃣ Show INSTANT TEXT (no weather yet)
+            setTicker(
+                "🚀 Welcome to my portfolio │ Loading weather… │ Associate Product Manager @ Warner Bros. Discovery │ Product Vision │ Product Insights │ Product Analytics │ Product Strategy │ Open to roles"
+            );
+            
+            async function loadTickerWeather() {
+                const apiKey = "be117ba9401773dbc9c56ee2c95706b9";
+                let weatherText = "London · Weather unavailable";
+            
+                try {
+                    const url = `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=${apiKey}`;
+                    const res = await fetch(url, { timeout: 2000 }); // 2 sec timeout
+                    const data = await res.json();
+            
+                    const temp = Math.round(data.main.temp);
+                    const desc = data.weather[0].description.replace(/\b\w/g, c => c.toUpperCase());
+            
+                    weatherText = `London · ${temp}°C · ${desc}`;
+                } catch (err) {
+                    // If API fails, we keep fallback text
+                }
+            
+                // 2️⃣ Replace only the weather part dynamically
+                setTicker(
+                    `🚀 Welcome to my portfolio │ ${weatherText} │ Associate Product Manager @ Warner Bros. Discovery │ Product Vision │ Product Insights │ Product Analytics │ Product Strategy │ Open to roles`
+                );
+            }
+            
+            // Load the weather in background
+            loadTickerWeather();
+            </script>
             
             
       </body>
