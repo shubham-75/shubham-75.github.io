@@ -1120,7 +1120,7 @@ h4 { font-size: clamp(1rem, 1.2vw + 0.75rem, 1.25rem); line-height: 1.3; }
     to   { transform: translateX(-100%); }
 }
 
-/* avoid your page hiding under ticker */
+/* so your content doesn't hide under the bar */
 body {
     padding-top: 38px;
 }
