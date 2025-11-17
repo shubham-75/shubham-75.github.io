@@ -260,15 +260,6 @@
                 </div>
             </div>
 
-            <div class="video-force">
-                <iframe
-                  src="https://www.youtube.com/embed/q_56Jap-ZXg"
-                  title="YouTube video"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen>
-                </iframe>
-              </div>
-              
               
               <!-- PRODUCT PROJECTS SECTION -->
 <div class="section" id="product-projects">
@@ -405,7 +396,15 @@
     </div>
 </div>
 
-              
+<div class="video-force">
+    <iframe
+      src="https://www.youtube.com/embed/q_56Jap-ZXg"
+      title="YouTube video"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </div>
+  
 
             <div class="section" id="tech">
                 <br>
@@ -515,6 +514,37 @@
 
 
         </div>
+
+        <div class="project-card">
+    
+            <div class="project-thumbnail">
+                <iframe 
+                    src="https://shubham-75.github.io/Sorting-Visualiser/" 
+                    loading="lazy"
+                    class="project-iframe"
+                ></iframe>
+            </div>
+        
+            <div class="project-content">
+                <h3>Sorting Visualiser</h3>
+                <p>
+                    A hands-on sorting algorithm visualiser that I built to deepen my understanding of DSA and make core concepts intuitive. Features real-time animations, algorithm switching, and adjustable speed and array size.
+                   <br>
+                    Try it out!
+                </p>
+        
+                <div class="project-buttons">
+                    <a href="https://shubham-75.github.io/Sorting-Visualiser/" target="_blank" class="btn-primary">
+                        🔗 Live Demo
+                    </a>
+        
+                    <a href="https://github.com/shubham-75/Sorting-Visualiser/blob/main/index.html" target="_blank" class="btn-secondary">
+                        💻 View Code
+                    </a>
+                </div>
+            </div>
+        
+        </div>
         
         <div class="section" id="resume" style="text-align: center;">
             <h3 class="section-title">
@@ -543,46 +573,7 @@
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="js/typed.min.js"></script>
-        <script src="js/main.js"></script>
-
-        <script>
-            function setTicker(text) {
-                document.getElementById("ticker-text").innerText = text;
-            }
-            
-            // 1️⃣ Show INSTANT TEXT (no weather yet)
-            setTicker(
-                "🚀 Welcome to my portfolio │ Loading weather… │ Associate Product Manager @ Warner Bros. Discovery │ Product Vision │ Product Insights │ Product Analytics │ Product Strategy │ Open to roles"
-            );
-            
-            async function loadTickerWeather() {
-                const apiKey = "be117ba9401773dbc9c56ee2c95706b9";
-                let weatherText = "London · Weather unavailable";
-            
-                try {
-                    const url = `https://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid=${apiKey}`;
-                    const res = await fetch(url, { timeout: 2000 }); // 2 sec timeout
-                    const data = await res.json();
-            
-                    const temp = Math.round(data.main.temp);
-                    const desc = data.weather[0].description.replace(/\b\w/g, c => c.toUpperCase());
-            
-                    weatherText = `London · ${temp}°C · ${desc}`;
-                } catch (err) {
-                    // If API fails, we keep fallback text
-                }
-            
-                // 2️⃣ Replace only the weather part dynamically
-                setTicker(
-                    `🚀 Welcome to my portfolio │ ${weatherText} │ Associate Product Manager @ Warner Bros. Discovery │ Product Vision │ Product Insights │ Product Analytics │ Product Strategy │ Open to roles`
-                );
-            }
-            
-            // Load the weather in background
-            loadTickerWeather();
-            </script>
-            
-        </div>      
+        <script src="js/main.js"></script> 
 
         <script>
             document.querySelectorAll(".play-audio").forEach(el =>
@@ -593,6 +584,8 @@
                 }
             );
             </script>
+
+
             
       </body>
 </html>

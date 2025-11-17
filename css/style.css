@@ -1219,3 +1219,61 @@ h4 { font-size: clamp(1rem, 1.2vw + 0.75rem, 1.25rem); line-height: 1.3; }
 #product-projects .card {
     margin: 0 !important;
 }
+.project-card {
+    background: #243; 
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+
+.project-thumbnail {
+    width: 100%;
+    height: 620px;   /* ⬅️ Increase from 350px */
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+
+.project-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    transform: scale(1);
+}
+
+.project-content h3 {
+    color: var(--primary-light);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--font-color);
+}
+
+.project-buttons {
+    margin-top: 16px;
+    display: flex;
+    gap: 12px;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: var(--secondary);
+    color: #000;
+}
+
+.btn-secondary {
+    background: #1a1a1a;
+    color: #fff;
+}
