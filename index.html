@@ -136,10 +136,7 @@
                             </a>
                         
                             <!-- AUDIO ICON -->
-                            <span id="name-audio" 
-                                  style="cursor: pointer; display: inline-flex; align-items: center; margin-left: 8px;">
-                                <span id="play-hello" style="font-size: 30px;">🔊</span>
-                            </span>
+                            <span class="play-audio" style="cursor:pointer; font-size:33px;">🔊</span>
                         </div>
                         
                     </div>
@@ -515,7 +512,7 @@
             <audio id="hello-audio">
                 <source src="src/assets/shubham audio.mp4" type="audio/mp4">
               </audio>
-              
+
 
         </div>
         
@@ -586,5 +583,16 @@
             </script>
             
         </div>      
+
+        <script>
+            document.querySelectorAll(".play-audio").forEach(el =>
+                el.onclick = () => {
+                    const audio = document.getElementById("hello-audio");
+                    audio.currentTime = 0;
+                    audio.play();
+                }
+            );
+            </script>
+            
       </body>
 </html>
