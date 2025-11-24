@@ -1328,3 +1328,11 @@ h4 { font-size: clamp(1rem, 1.2vw + 0.75rem, 1.25rem); line-height: 1.3; }
 .view-paper-btn:hover {
     background: #ffd86d;
 }
+.resume-preview-img {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    border: 4px solid #FFD700;     /* yellow border */
+    border-radius: 15px;           /* rounded corners */
+    box-shadow: 0 0 20px rgba(0,0,0,0.20);
+}
